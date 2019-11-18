@@ -1,7 +1,6 @@
 package com.m7amdelbana.javahangin.view.main.navigation.home;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,9 +9,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.m7amdelbana.javahangin.R;
-import com.m7amdelbana.javahangin.models.Place;
+import com.m7amdelbana.javahangin.network.models.Place;
 import com.m7amdelbana.javahangin.util.ItemAdapterClick;
-import com.m7amdelbana.javahangin.view.place.PlaceActivity;
 
 import java.util.List;
 

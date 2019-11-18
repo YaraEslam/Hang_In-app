@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.m7amdelbana.javahangin.R;
 import com.m7amdelbana.javahangin.util.LoadingDialog;
 import com.m7amdelbana.javahangin.view.auth.registeration.RegisterActivity;
+import com.m7amdelbana.javahangin.view.main.MainActivity;
 
 public class LoginActivity extends AppCompatActivity implements LoginView {
 
@@ -93,7 +94,10 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
     @Override
     public void validCradintial() {
 
-        Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show();
+
+        startActivity(new Intent(this, MainActivity.class));
+        finish();
     }
 
     @Override

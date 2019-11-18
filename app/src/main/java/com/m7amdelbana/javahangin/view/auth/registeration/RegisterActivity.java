@@ -3,6 +3,7 @@ package com.m7amdelbana.javahangin.view.auth.registeration;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,6 +14,7 @@ import android.widget.Toast;
 
 import com.m7amdelbana.javahangin.R;
 import com.m7amdelbana.javahangin.util.LoadingDialog;
+import com.m7amdelbana.javahangin.view.main.MainActivity;
 
 
 public class RegisterActivity extends AppCompatActivity implements RegisterView {
@@ -100,7 +102,11 @@ public class RegisterActivity extends AppCompatActivity implements RegisterView 
     public void confirmPasswordError() { edtConfirmPassword.setError("Invalid password"); }
 
     @Override
-    public void validCradintial() { Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show(); }
+    public void validCradintial() {
+        //Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, MainActivity.class));
+        finish();
+    }
 
     @Override
     public void inValidCradintial() { Toast.makeText(this, "Invalid email or password", Toast.LENGTH_SHORT).show(); }
